@@ -189,7 +189,7 @@ if page == "Stock Real-time Prediction":
         plot_raw_data(ticket_text)
         
         # Forecasting
-        predict_state = st.text("Predicting "+selected_stock+"...")
+        predict_state = st.text("Predicting "+ticket_text+"...")
         df_train = data[['Date','Close']]
         df_train = df_train.rename(columns={"Date":"ds","Close":"y"})
         
