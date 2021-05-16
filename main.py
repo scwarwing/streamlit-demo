@@ -18,6 +18,7 @@ import numpy as np
 from fbprophet.diagnostics import cross_validation
 from fbprophet.diagnostics import performance_metrics
 from fbprophet.plot import plot_cross_validation_metric
+from fbprophet.serialize import model_to_json
 import json
 import holidays
 
@@ -208,7 +209,7 @@ if page == "Stock Real-time Prediction":
         fig2 = m.plot_components(forecast)
         st.write(fig2)
         
-        predict_state.text("Predicting "+selected_stock+"...done")  
+        predict_state.text("Predicting "+ticket_text+"...done")  
     
 
 if page == "AutoML":
